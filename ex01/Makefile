@@ -5,16 +5,16 @@
 #                                                      +:+                     #
 #    By: yitoh <yitoh@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
-#    Created: 2024/02/03 15:18:32 by yitoh         #+#    #+#                  #
-#    Updated: 2024/02/06 20:52:30 by yitoh         ########   odam.nl          #
+#    Created: 2024/02/06 20:52:15 by yitoh         #+#    #+#                  #
+#    Updated: 2024/02/06 20:53:25 by yitoh         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=BrainzzZ
+NAME	=MoreBrainz
 CC		=c++
 CFLAGS	=-Wall -Werror -Wextra -std=c++98 #-g -fsanitize=thread
 RM		=rm -f
-SRC		=Zombie.cpp newZombie.cpp randomChump.cpp main.cpp
+SRC		=Zombie.cpp zombieHorde.cpp main.cpp
 OBJ		=$(SRC:%.cpp=obj/%.o)
 
 all:	$(NAME)

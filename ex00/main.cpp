@@ -6,7 +6,7 @@
 /*   By: yitoh <yitoh@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/02/03 15:21:36 by yitoh         #+#    #+#                 */
-/*   Updated: 2024/02/06 16:05:07 by yitoh         ########   odam.nl         */
+/*   Updated: 2024/02/06 20:49:48 by yitoh         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,5 @@ int main(void)
     test1->announce();
     randomChump("stack");
     delete(test1);
-
     return 0;
 }

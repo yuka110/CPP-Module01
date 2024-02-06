@@ -1,39 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Zombie.cpp                                         :+:    :+:            */
+/*   zombieHorde.cpp                                    :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: yitoh <yitoh@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2024/02/03 15:21:23 by yitoh         #+#    #+#                 */
-/*   Updated: 2024/02/06 20:55:18 by yitoh         ########   odam.nl         */
+/*   Created: 2024/02/06 20:53:40 by yitoh         #+#    #+#                 */
+/*   Updated: 2024/02/06 21:31:21 by yitoh         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(void)
+Zombie* zombieHorde(int N, std::string name)
 {
-   std::cout << "Zombie has created" << std::endl;
-}
-
-Zombie::~Zombie()
-{
-    std::cout << this->_name << " has deconstructed" << std::endl;
-}
-
-std::string Zombie::get_name(void) const
-{
-    return(this->_name);
-}
-
-void Zombie::set_name(std::string name)
-{
-    this->_name = name;
-}
-
-void    Zombie::announce(void)
-{
-    std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-
+    Zombie *zombies = new Zombie[N];
+    for (int i = 0; i < N; i++)
+    {
+        zombies[N].set_name(name);
+        std::cout << "testtesttesttest" << std::endl;
+        zombies[N].announce();
+    }
+    return (&zombies[0]);
 }
