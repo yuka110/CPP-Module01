@@ -6,13 +6,13 @@
 #    By: yitoh <yitoh@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2024/02/03 15:18:32 by yitoh         #+#    #+#                  #
-#    Updated: 2024/02/05 17:33:20 by yitoh         ########   odam.nl          #
+#    Updated: 2024/02/06 16:14:03 by yitoh         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=BrainzzZ
 CC		=c++
-CFLAGS	=-Wall -Werror -Wextra -std=c++98 #-g -fsanitize=thread #-flto -O3
+CFLAGS	=-Wall -Werror -Wextra -std=c++98 #-g -fsanitize=thread
 RM		=rm -f
 SRC		=Zombie.cpp newZombie.cpp randomChump.cpp main.cpp
 OBJ		=$(SRC:%.cpp=obj/%.o)
@@ -20,7 +20,7 @@ OBJ		=$(SRC:%.cpp=obj/%.o)
 all:	$(NAME)
 
 
-$(OBJ):		$(SRC) Zombie.hpp Makefile
+$(OBJ):		$(SRC) Zombie.hpp
 				@mkdir -p $(dir $@)
 				@printf "\e[1;34mBuilding $@\n\e[0;00m"
 				@$(CC) $(CFLAGS) -c $(@:obj/%.o=%.cpp) -o $@
