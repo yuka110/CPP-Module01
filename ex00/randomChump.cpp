@@ -6,7 +6,7 @@
 /*   By: yitoh <yitoh@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/02/03 15:21:29 by yitoh         #+#    #+#                 */
-/*   Updated: 2024/02/06 21:14:03 by yitoh         ########   odam.nl         */
+/*   Updated: 2024/02/07 14:04:29 by yitoh         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 void    randomChump(std::string name)
 {
-    Zombie  obake;
-    obake.set_name(name);
+    Zombie  obake(name);
     obake.announce();
     return ;
 }

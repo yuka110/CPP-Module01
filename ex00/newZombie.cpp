@@ -6,7 +6,7 @@
 /*   By: yitoh <yitoh@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/02/03 15:21:32 by yitoh         #+#    #+#                 */
-/*   Updated: 2024/02/06 16:02:28 by yitoh         ########   odam.nl         */
+/*   Updated: 2024/02/07 14:04:32 by yitoh         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 Zombie*    newZombie(std::string name)
 {
-    Zombie* obake = new (Zombie);
-    obake->set_name(name);
+    Zombie* obake = new Zombie(name);
     return (obake);
 }
-//stack vs heap!!

@@ -6,7 +6,7 @@
 /*   By: yitoh <yitoh@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/02/06 20:53:29 by yitoh         #+#    #+#                 */
-/*   Updated: 2024/02/06 21:05:10 by yitoh         ########   odam.nl         */
+/*   Updated: 2024/02/07 13:43:16 by yitoh         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,14 @@
 int main(void)
 {
     Zombie *test1;
-    int     N = 5;
+    Zombie *test2;
+    Zombie *test3;
 
-    test1 = zombieHorde(N, "Hello");
-    // for (int i = 0; i < N; i++)
-    // {
-    //     delete(&test1[N]);
-    // }
+    test1 = zombieHorde(3, "Phewww");
+    test2 = zombieHorde(-1, "haha");
+    test3 = zombieHorde(5, "None");
     delete[] test1;
+    delete[] test2;
+    delete[] test3;
     return 0;
 }
