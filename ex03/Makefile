@@ -6,21 +6,21 @@
 #    By: yitoh <yitoh@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2024/02/06 20:52:15 by yitoh         #+#    #+#                  #
-#    Updated: 2024/02/06 20:53:25 by yitoh         ########   odam.nl          #
+#    Updated: 2024/02/13 20:47:42 by yitoh         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=MoreBrainz
+NAME	=Weapons
 CC		=c++
 CFLAGS	=-Wall -Werror -Wextra -std=c++98 #-g -fsanitize=thread
 RM		=rm -f
-SRC		=Zombie.cpp zombieHorde.cpp main.cpp
+SRC		=main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 OBJ		=$(SRC:%.cpp=obj/%.o)
 
 all:	$(NAME)
 
 
-$(OBJ):		$(SRC) Zombie.hpp
+$(OBJ):		$(SRC) Weapon.hpp
 				@mkdir -p $(dir $@)
 				@printf "\e[1;34mBuilding $@\n\e[0;00m"
 				@$(CC) $(CFLAGS) -c $(@:obj/%.o=%.cpp) -o $@
