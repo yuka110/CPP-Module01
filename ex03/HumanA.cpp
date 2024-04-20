@@ -6,17 +6,19 @@
 /*   By: yitoh <yitoh@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/02/13 19:41:33 by yitoh         #+#    #+#                 */
-/*   Updated: 2024/02/13 20:48:18 by yitoh         ########   odam.nl         */
+/*   Updated: 2024/04/20 17:05:04 by yitoh         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 
-HumanA::HumanA(std::string name, Weapon weapon)
+HumanA::HumanA(){
+}
+
+HumanA::HumanA(std::string name, Weapon &weapon) : _name(name)
 {
-    std::cout << name << " has constructed" << std::endl;
-    _name = name;
     _weapon = &weapon;
+    std::cout << _name << " has constructed - weapon is " << (*_weapon).getType() << std::endl;
 }
 
 HumanA::~HumanA(void)

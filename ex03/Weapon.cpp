@@ -6,15 +6,20 @@
 /*   By: yitoh <yitoh@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/02/13 19:46:57 by yitoh         #+#    #+#                 */
-/*   Updated: 2024/02/13 21:07:27 by yitoh         ########   odam.nl         */
+/*   Updated: 2024/04/20 16:58:50 by yitoh         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
-//this needs to be malloced
+
+Weapon::Weapon(){
+    
+}
+
 Weapon::Weapon(std::string type)
 {
-    std::cout << type << " has constructed" << std::endl;
+    _type = type;
+    std::cout << _type << " has constructed" << std::endl;
 }
 
 Weapon::~Weapon(void)
@@ -22,7 +27,7 @@ Weapon::~Weapon(void)
     std::cout << _type << " has deconstructed" << std::endl;
 }
 
-std::string Weapon::getType(void) const
+const std::string &Weapon::getType(void)
 {
     return(_type);
 }

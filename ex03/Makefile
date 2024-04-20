@@ -6,13 +6,13 @@
 #    By: yitoh <yitoh@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2024/02/06 20:52:15 by yitoh         #+#    #+#                  #
-#    Updated: 2024/02/13 20:47:42 by yitoh         ########   odam.nl          #
+#    Updated: 2024/04/20 17:20:15 by yitoh         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=Weapons
 CC		=c++
-CFLAGS	=-Wall -Werror -Wextra -std=c++98 #-g -fsanitize=thread
+CFLAGS	=-Wall -Werror -Wextra #-std=c++98 #-g -fsanitize=thread
 RM		=rm -f
 SRC		=main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 OBJ		=$(SRC:%.cpp=obj/%.o)

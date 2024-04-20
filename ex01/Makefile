@@ -6,13 +6,13 @@
 #    By: yitoh <yitoh@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2024/02/06 20:52:15 by yitoh         #+#    #+#                  #
-#    Updated: 2024/02/06 20:53:25 by yitoh         ########   odam.nl          #
+#    Updated: 2024/04/18 15:26:15 by yitoh         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=MoreBrainz
 CC		=c++
-CFLAGS	=-Wall -Werror -Wextra -std=c++98 #-g -fsanitize=thread
+CFLAGS	=-Wall -Werror -Wextra -std=c++98 -g #-fsanitize=leak
 RM		=rm -f
 SRC		=Zombie.cpp zombieHorde.cpp main.cpp
 OBJ		=$(SRC:%.cpp=obj/%.o)

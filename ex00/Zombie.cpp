@@ -6,15 +6,14 @@
 /*   By: yitoh <yitoh@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/02/03 15:21:23 by yitoh         #+#    #+#                 */
-/*   Updated: 2024/02/07 14:05:02 by yitoh         ########   odam.nl         */
+/*   Updated: 2024/04/18 15:16:48 by yitoh         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string name)
+Zombie::Zombie(std::string name) : _name(name)
 {
-    _name = name;
    std::cout << _name << " has created" << std::endl;
 }
 
