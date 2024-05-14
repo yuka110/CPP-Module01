@@ -5,21 +5,22 @@
 #                                                      +:+                     #
 #    By: yitoh <yitoh@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
-#    Created: 2024/02/06 20:52:15 by yitoh         #+#    #+#                  #
-#    Updated: 2024/04/30 14:13:32 by yitoh         ########   odam.nl          #
+#    Created: 2024/04/30 16:22:11 by yitoh         #+#    #+#                  #
+#    Updated: 2024/05/07 12:52:54 by yitoh         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=MoreBrainz
+NAME	=Files
 CC		=c++
-CFLAGS	=-Wall -Werror -Wextra -std=c++11 -g #-fsanitize=leak
+CFLAGS	=-Wall -Werror -Wextra -std=c++11 -g -fsanitize=thread
 RM		=rm -f
-SRC		=Zombie.cpp zombieHorde.cpp main.cpp
+SRC		=main.cpp Replace.cpp
 OBJ		=$(SRC:%.cpp=obj/%.o)
 
 all:	$(NAME)
 
-$(OBJ):		$(SRC) Zombie.hpp
+
+$(OBJ):		$(SRC)
 				@mkdir -p $(dir $@)
 				@printf "\e[1;34mBuilding $@\n\e[0;00m"
 				@$(CC) $(CFLAGS) -c $(@:obj/%.o=%.cpp) -o $@

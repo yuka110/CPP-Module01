@@ -1,37 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Weapon.cpp                                         :+:    :+:            */
+/*   main.cpp                                           :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: yitoh <yitoh@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2024/02/13 19:46:57 by yitoh         #+#    #+#                 */
-/*   Updated: 2024/04/30 14:39:42 by yitoh         ########   odam.nl         */
+/*   Created: 2024/04/30 16:22:24 by yitoh         #+#    #+#                 */
+/*   Updated: 2024/05/07 12:33:19 by yitoh         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#include "Replace.hpp"
 
-Weapon::Weapon(){ 
-}
-
-Weapon::Weapon(std::string type)
+int main(int ac, char **av)
 {
-    _type = type;
-    std::cout << _type << " has constructed" << std::endl;
-}
-
-Weapon::~Weapon(void)
-{
-    std::cout << _type << " has destructed" << std::endl;
-}
-
-const std::string &Weapon::getType(void)
-{
-    return(_type);
-}
-
-void    Weapon::setType(std::string type)
-{
-     _type = type;
+    if (ac != 4)
+        return (1);
+    Replace a(av);
+    a.replace_copy();
+    return 0;
 }

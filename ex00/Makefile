@@ -6,13 +6,13 @@
 #    By: yitoh <yitoh@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2024/02/03 15:18:32 by yitoh         #+#    #+#                  #
-#    Updated: 2024/02/06 20:52:30 by yitoh         ########   odam.nl          #
+#    Updated: 2024/04/30 13:45:43 by yitoh         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=BrainzzZ
 CC		=c++
-CFLAGS	=-Wall -Werror -Wextra -std=c++98 #-g -fsanitize=thread
+CFLAGS	=-Wall -Werror -Wextra -std=c++11 #-g -fsanitize=thread
 RM		=rm -f
 SRC		=Zombie.cpp newZombie.cpp randomChump.cpp main.cpp
 OBJ		=$(SRC:%.cpp=obj/%.o)

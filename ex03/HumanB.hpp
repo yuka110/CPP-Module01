@@ -6,12 +6,12 @@
 /*   By: yitoh <yitoh@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/02/13 19:58:27 by yitoh         #+#    #+#                 */
-/*   Updated: 2024/04/20 18:38:35 by yitoh         ########   odam.nl         */
+/*   Updated: 2024/04/30 15:58:57 by yitoh         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HUMANB_HPP
-#define HUMANB_HPP
+# define HUMANB_HPP
 
 #include <iostream>
 #include <cstring>
@@ -22,8 +22,8 @@ class   HumanB
     public:
         HumanB();
         HumanB(std::string name);
-        ~HumanB(void);
-        void    attack(void);
+        ~HumanB();
+        void    attack();
         void    setWeapon(Weapon &weapon);
     private:
         std::string _name;

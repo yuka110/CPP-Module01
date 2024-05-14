@@ -6,12 +6,12 @@
 /*   By: yitoh <yitoh@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/02/13 19:43:41 by yitoh         #+#    #+#                 */
-/*   Updated: 2024/04/20 16:59:05 by yitoh         ########   odam.nl         */
+/*   Updated: 2024/04/30 14:33:17 by yitoh         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WEAPON_HPP
-#define WEAPON_HPP
+# define WEAPON_HPP
 
 #include <iostream>
 #include <cstring>
