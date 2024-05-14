@@ -6,7 +6,7 @@
 /*   By: yitoh <yitoh@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/02 14:45:18 by yitoh         #+#    #+#                 */
-/*   Updated: 2024/05/07 12:49:24 by yitoh         ########   odam.nl         */
+/*   Updated: 2024/05/14 15:17:54 by yitoh         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,11 +52,14 @@ void Replace::replace_copy()
     {
         while (std::getline(infile, line))
         {
-            found = line.find(_s1);
-            if (found != std::string::npos)
-            {
-                line.erase(found, _s1.size());
-                line.insert(found, _s2);
+            if (_s1.compare(_s2)){
+                found = line.find(_s1);
+                while (found != std::string::npos)
+                {
+                    line.erase(found, _s1.size());
+                    line.insert(found, _s2);
+                    found = line.find(_s1);
+                }
             }
             outfile << line << std::endl;
         }
